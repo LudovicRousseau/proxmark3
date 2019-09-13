@@ -1,0 +1,5 @@
+PACKAGE (3.1.0) UNRELEASED; urgency=medium
+
+  * Initial release.
+
+ -- Ludovic Rousseau <rousseau@debian.org>  Fri, 13 Sep 2019 18:19:18 +0200
