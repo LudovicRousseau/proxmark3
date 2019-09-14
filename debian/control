@@ -5,19 +5,19 @@ Maintainer: Geany Packaging Team <pkg-geany-team@lists.alioth.debian.org>
 Uploaders: Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>,
   Irene "Tissy" Pirrotta <tissy@parrotsec.org>
 Homepage: http://www.proxmark.com
-Build-Depends: debhelper (= 12),
-               p7zip,
+Build-Depends: ca-certificates,
+               debhelper (= 12),
+               gcc-arm-none-eabi,
                git,
-               ca-certificates,
+               libnewlib-dev,
+               libqt4-dev,
                libreadline5,
                libreadline-dev,
                libusb-0.1-4,
                libusb-dev,
+               p7zip,
                pkg-config,
-               wget,
-               gcc-arm-none-eabi,
-               libnewlib-dev,
-               libqt4-dev
+               wget
 Standards-Version: 4.4.0
 
 Package: proxmark3
