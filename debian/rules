@@ -9,6 +9,10 @@
 override_dh_make:
 	make all
 
+override_dh_auto_clean:
+	dh_auto_clean
+	rm -f .Makefile.options.cache
+
 override_dh_auto_configure:
 	dh_auto_configure -- --enable-vte --enable-the-force --enable-gtk3
 
