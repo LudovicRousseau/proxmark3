@@ -12,5 +12,5 @@ override_dh_make:
 override_dh_auto_configure:
 	dh_auto_configure -- --enable-vte --enable-the-force --enable-gtk3
 
-override_dh_install:
-	make -j install PREFIX=/usr UDEV_PREFIX=/lib/udev/rules.d
+override_dh_auto_install:
+	dh_auto_install -- PREFIX=/usr UDEV_PREFIX=/lib/udev/rules.d
