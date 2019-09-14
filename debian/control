@@ -5,7 +5,7 @@ Maintainer: Geany Packaging Team <pkg-geany-team@lists.alioth.debian.org>
 Uploaders: Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>,
   Irene "Tissy" Pirrotta <tissy@parrotsec.org>
 Homepage: http://www.proxmark.com
-Build-Depends: debhelper (>= 10),
+Build-Depends: debhelper (= 12),
                dh-autoreconf,
                p7zip,
                git,
