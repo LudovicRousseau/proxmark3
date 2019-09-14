@@ -6,7 +6,6 @@ Uploaders: Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>,
   Irene "Tissy" Pirrotta <tissy@parrotsec.org>
 Homepage: http://www.proxmark.com
 Build-Depends: debhelper (= 12),
-               dh-autoreconf,
                p7zip,
                git,
                ca-certificates,
