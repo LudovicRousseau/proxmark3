@@ -11,7 +11,6 @@ override_dh_make:
 
 override_dh_auto_configure:
 	dh_auto_configure -- --enable-vte --enable-the-force --enable-gtk3
-	sed -i -r 's,^sys_lib_dlsearch_path_spec="(.*)$$,sys_lib_dlsearch_path_spec="/usr/lib /lib \1,' $(CURDIR)/libtool
 
 override_dh_install:
 	make -j install PREFIX=/usr UDEV_PREFIX=/lib/udev/rules.d
