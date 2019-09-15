@@ -1,12 +1,22 @@
 To upgrade to a new upstream version:
 =====================================
 
+$ git checkout master
+$ git fetch upstream
+$ git merge upstream/master
+
 Tag the new version:
 $ VERSION=$(date +%Y.%m.%d)
 $ git tag v$VERSION
 
+Upgrade git branch upstream/latest:
+$ git checkout upstream/latest:
+$ git merge master
+
 Edit debian/changelog for this new version:
+$ git checkout debian/master
 $ dch --newversion $VERSION-1 
+
 
 Generate a new pristine tar:
 $ gbp buildpackage --git-pristine-tar --git-pristine-tar-commit --git-upstream-tag='v%(version)s' --git-ignore-new --git-no-pbuilder
