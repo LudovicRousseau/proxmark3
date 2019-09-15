@@ -17,7 +17,10 @@ Edit debian/changelog for this new version:
 $ git checkout debian/master
 $ dch --newversion $VERSION-1 
 
-
 Generate a new pristine tar:
-$ gbp buildpackage --git-pristine-tar --git-pristine-tar-commit --git-upstream-tag='v%(version)s' --git-ignore-new --git-no-pbuilder
-- 
+$ gbp buildpackage --git-pristine-tar --git-pristine-tar-commit --git-upstream-tag='v%(version)s' --git-ignore-new
+
+Build the package:
+$ DEB_BUILD_OPTIONS="nostrip" gbp buildpackage
+
+"nostrip" is used because dh_dwz fails for a yet unknown reason.
