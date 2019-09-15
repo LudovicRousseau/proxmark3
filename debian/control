@@ -6,7 +6,7 @@ Uploaders: Lorenzo "Palinuro" Faletra <palinuro@parrotsec.org>,
   Irene "Tissy" Pirrotta <tissy@parrotsec.org>
 Homepage: http://www.proxmark.com
 Build-Depends: ca-certificates,
-               debhelper (= 12),
+               debhelper (>= 12),
                gcc-arm-none-eabi,
                git,
                libnewlib-dev,
