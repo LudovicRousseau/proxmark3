@@ -1,0 +1,13 @@
+To upgrade to a new upstream version:
+=====================================
+
+Tag the new version:
+$ VERSION=$(date +%Y.%m.%d)
+$ git tag v$VERSION
+
+Edit debian/changelog for this new version:
+$ dch --newversion $VERSION-1 
+
+Generate a new pristine tar:
+$ gbp buildpackage --git-pristine-tar --git-pristine-tar-commit --git-upstream-tag='v%(version)s' --git-ignore-new --git-no-pbuilder
+- 
